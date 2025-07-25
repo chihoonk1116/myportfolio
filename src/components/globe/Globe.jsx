@@ -4,16 +4,16 @@ import createGlobe from "cobe";
 import { useEffect, useRef } from "react";
 import { twMerge } from "tailwind-merge";
 
-const GLOBE_CONFIG = {
-  width: 800,
-  height: 800,
+const GLOBE_CONFIG = { 
+  width: 400,
+  height: 400,
   onRender: () => {},
   devicePixelRatio: 2,
   phi: 0,
   theta: 0.3,
   dark: 1,
   diffuse: 0.4,
-  mapSamples: 10000,
+  mapSamples: 5000,
   mapBrightness: 1.2,
   baseColor: [1, 1, 1],
   markerColor: [1, 1, 1],
@@ -47,12 +47,18 @@ export function Globe({ className, config = GLOBE_CONFIG }) {
     window.addEventListener("resize", onResize);
     onResize();
 
+    let lastTime = Date.now();
+
     const globe = createGlobe(canvasRef.current, {
       ...config,
-      width: width * 2,
-      height: width * 2,
+      width: width,
+      height: width,
       onRender: (state) => {
-        phi += 0.0025; 
+        const now = Date.now();
+        if (now - lastTime > 66) {
+          phi += 0.0025;
+          lastTime = now;
+        }
         state.phi = phi;
         state.width = width * 2;
         state.height = width * 2;
@@ -70,7 +76,7 @@ export function Globe({ className, config = GLOBE_CONFIG }) {
     <div className={twMerge("mx-auto aspect-[1/1] w-full", className)}>
       <canvas
         className={twMerge(
-          "size-[800px] opacity-0 transition-opacity duration-500 [contain:layout_paint_size]"
+          "size-[600px] opacity-0 transition-opacity duration-500 [contain:layout_paint_size]"
         )}
         ref={canvasRef}
       />

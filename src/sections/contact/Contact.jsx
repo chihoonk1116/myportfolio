@@ -16,7 +16,7 @@ const Contact = () => {
         </div>
       </div>
       <figure className='globe_wrapper'>
-        {/* <Globe/> */}
+        <Globe/>
       </figure>
     </section>
     
