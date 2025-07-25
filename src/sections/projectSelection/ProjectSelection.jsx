@@ -1,5 +1,6 @@
 import React from 'react'
 import ProjectCard from '../../components/projectCard/ProjectCard'
+import AnimatedHeader from '../../components/animatedHeader/AnimatedHeader'
 
 import imageSrc from '/assets/coding-pov.png'
 import aws from '/assets/icons/aws.png'
@@ -21,8 +22,33 @@ const ProjectSelection = () => {
 
   return (
     <section id='project-selection_section'>
-      <div className="container">
+      <div className="container project-container">
+        <AnimatedHeader title={"Project"} subTitle={''}/>
         <div className="project-selection_cards-list">
+          <div className="project-selection_cards_card-wrapper">
+            <ProjectCard 
+              source={imageSrc} 
+              projectName={"Exam Simulator"}  
+              description={description}
+              skillSets={skillSets}
+            />
+          </div>
+          <div className="project-selection_cards_card-wrapper">
+            <ProjectCard 
+              source={imageSrc} 
+              projectName={"PDF Converter"}  
+              description={description}
+              skillSets={skillSets}
+            />
+          </div>
+          <div className="project-selection_cards_card-wrapper">
+            <ProjectCard 
+              source={imageSrc} 
+              projectName={"Church Web Application"}  
+              description={description}
+              skillSets={skillSets}
+            />
+          </div>
           <div className="project-selection_cards_card-wrapper">
             <ProjectCard 
               source={imageSrc} 
@@ -31,7 +57,7 @@ const ProjectSelection = () => {
               skillSets={skillSets}
             />
           </div>
-          <div className="project-selction_cards_card-wrapper">
+          <div className="project-selection_cards_card-wrapper">
             <ProjectCard 
               source={imageSrc} 
               projectName={"project one"}  
@@ -39,30 +65,7 @@ const ProjectSelection = () => {
               skillSets={skillSets}
             />
           </div>
-          <div className="project-selction_cards_card-wrapper">
-            <ProjectCard 
-              source={imageSrc} 
-              projectName={"project one"}  
-              description={description}
-              skillSets={skillSets}
-            />
-          </div>
-          <div className="project-selction_cards_card-wrapper">
-            <ProjectCard 
-              source={imageSrc} 
-              projectName={"project one"}  
-              description={description}
-              skillSets={skillSets}
-            />
-          </div>
-          <div className="project-selction_cards_card-wrapper">
-            <ProjectCard 
-              source={imageSrc} 
-              projectName={"project one"}  
-              description={description}
-              skillSets={skillSets}
-            />
-          </div>
+  
         </div>
       </div>
     </section>

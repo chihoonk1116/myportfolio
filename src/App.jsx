@@ -1,7 +1,7 @@
 import Navbar from "./sections/navbar/Navbar"
 import Hero from './sections/hero/Hero'       
 import AboutMe from './sections/about/AboutMe'
-import Projects from "./sections/projects/Projects"
+import Experience from './sections/experience/Experience'
 import ProjectSelection from './sections/projectSelection/ProjectSelection'
 import Contact from "./sections/contact/Contact"
 import Footer from "./components/footer/Footer"
@@ -14,7 +14,7 @@ const App = () => {
       <Navbar />
       <Hero/>
       <AboutMe/>
-      <Projects/>
+      <Experience/>
       <ProjectSelection/>
       <Contact/>
       <Footer/>

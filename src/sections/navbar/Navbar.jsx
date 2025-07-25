@@ -23,32 +23,7 @@ function NavigationMenu(){
 }
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false)
-  const [isHovered, setIsHovered] = useState(false);
   const navRef = useRef()
-
-  const prevScroll = useRef(0)
-
-  useEffect(() => {
-    function handleScroll(){
-      const currentScroll = window.scrollY
-      if(currentScroll > prevScroll.current){
-        navRef.current.classList.add("scrolled")
-      }else{
-        navRef.current.classList.remove("scrolled")
-      }
-
-      prevScroll.current = currentScroll
-    }
-
-    window.addEventListener("scroll", handleScroll)
-    return () => window.removeEventListener("scroll", handleScroll)
-  }, [])
-
-  useEffect(()=>{
-   if(isHovered){
-    navRef.current.classList.remove("scrolled")
-   }
-  }, [isHovered])
 
   const variants = {
     open: (delayValue) => ({
@@ -75,8 +50,6 @@ const Navbar = () => {
     <div 
       className="nav-section" 
       ref={navRef}
-      onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={() => setIsHovered(false)}
     >
       <div className="nav-container">
         <div className="nav-wrapper">

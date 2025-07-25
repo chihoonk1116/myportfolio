@@ -158,6 +158,9 @@ const CodeEditorArea = () => {
           {displayedCode} 
         </SyntaxHighlighter>
       </div>
+      <div className="code-window_footer">
+        <span>Thank you for your visiting</span>
+      </div>
     </div>
   )
 }

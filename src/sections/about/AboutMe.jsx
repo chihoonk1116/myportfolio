@@ -33,9 +33,9 @@ const AboutMe = () => {
 
 
   return (
-    <section>
+    <section className='about-section'>
       <div className='container aboutme-container'>
-        <AnimatedHeader/>
+        <AnimatedHeader title={'Chihoon kim'} subTitle={'Full-Stack Developer'}/>
         {/* <h1 className='custom-h1'>About Me</h1> */}
         <div className="aboutme-container_grid">
           <div className="grid-a grid">
