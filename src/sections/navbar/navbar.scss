@@ -1,0 +1,143 @@
+@use '../../mixin.scss' as *;
+
+.nav {
+
+	&-section{
+		width: 100%;
+		background-color: var(--color-midnight);
+		position: fixed;
+		z-index: 10;
+		transition: all 0.3s ease-in-out;
+	}
+
+	&-container{
+		margin: auto;
+		max-width: 1280px;
+	}
+
+	&-wrapper{
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		max-width: var(--standard-max-width);
+
+		margin: 0 auto;
+		padding: 0 1rem;
+		box-sizing: border-box;
+
+		@include respond(lg){
+			padding: 1rem;
+		}
+	}
+
+	&-title-wrapper{
+		flex: 1;
+	}
+
+	&-title{
+		color: #FFF;
+  	text-transform: uppercase;
+	}
+	
+	&-ul{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		margin: 0;
+
+	}
+
+	&-link{
+		display: inline-block;
+		color: #FFF;
+  		text-transform: uppercase;
+		transition: all 0.2s ease-in-out;
+		padding: 1.5rem;
+	}
+
+	&-button{
+		display: none;
+		border: none;
+
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		row-gap: 2px;
+
+		background-color: rgba(255, 255, 255, 1);
+		color: white;
+		padding: 0.6rem;
+		border-radius: 5px;
+
+		cursor: pointer;
+		transition: all 0.2s ease-in-out;
+
+		@include respond(lg){
+			display: flex;
+		}
+
+
+	}
+
+	&-link:hover,
+	&-button:hover{
+		background-color: rgba(255, 255, 255, 1);
+		color: var(--color-primary);
+	}
+
+	&-button.active .bar:nth-of-type(1){
+		transform: rotate(45deg) translate(3.5px, 3.5px);
+	}
+
+	&-button.active .bar:nth-of-type(3){
+		transform: rotate(-45deg) translate(3.5px, -3.5px);
+	}
+
+	&-button.active .bar:nth-of-type(2){
+		opacity: 0;
+	}
+
+}
+
+.nav-section.scrolled {
+	background-color: var(--color-lavender);
+	.nav-ul a{
+		padding: 0.2rem 1.5rem;
+	}
+	.nav-wrapper{
+		padding: 0.2rem;
+	}
+	.nav-button{
+		padding: 0.3rem;
+	}
+	.bar{
+		height: 2px;
+		background-color: var(--color-lavender);
+	}
+}
+
+#desktop-nav{
+
+	display: block;
+
+	@include respond(lg){
+		display: none;
+	}
+}
+
+#mobile-nav{
+
+	display: none;
+
+	@include respond(lg){
+		display: block;
+	}
+}
+
+.bar{
+	width: 15px;
+	height: 3px;
+	background-color: var(--color-primary);
+	transition: all 0.3s ease-in-out;
+}

@@ -1,0 +1,117 @@
+
+// marquee component
+.marquee-container{
+	height: 100%;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex: 1;
+	margin: 1rem;
+
+	box-sizing: border-box;
+	position: relative;
+
+	// 3D config
+	transform-style: preserve-3d;
+	transform: 
+		translate(-100px, 0px) translateZ(-100px) 
+		rotateX(25deg) rotateY(-10deg) rotateZ(25deg)
+	;
+
+}
+
+
+.marquee-content-wrapper{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	row-gap: 1rem;
+	column-gap: 1rem;
+}
+
+.marquee-content{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	row-gap: 1rem;
+	column-gap: 1rem;
+	
+	flex-direction: column;
+	animation: marquee 30s linear infinite;
+	flex-shrink: 0;
+
+}
+
+.marquee-content span{
+	display: inline-block;
+	margin: 1rem 0rem;
+	font-size: 1.2em;
+	color: #FFF
+}
+
+@keyframes marquee {
+	0% {
+		transform: translateY(0%);
+	}
+
+	100% {
+		transform: translateY(calc(-100% - 1rem));
+	}
+}
+
+
+.marquee-top-gradient,
+.marquee-bottom-gradient{
+	position: absolute;
+	width: 100%;
+	height: 100px;
+}
+
+.marquee-right-gradient,
+.marquee-left-gradient{
+	position: absolute;
+	width: 200px;
+	height: 100%;
+}
+
+.marquee-top-gradient{
+	background: linear-gradient(
+		to bottom,
+		#030412 0%,
+		rgba(3, 4, 18, 0.5) 30%,
+		rgba(3, 4, 18, 0) 100%
+	);
+	top:0;
+}
+
+.marquee-bottom-gradient{
+	background: linear-gradient(
+		to top,
+		#030412 0%,
+		rgba(3, 4, 18, 0.5) 30%,
+		rgba(3, 4, 18, 0) 100%
+	);
+	bottom: 0;
+}
+
+.marquee-right-gradient{
+	background: linear-gradient(
+		to left,
+		#030412 0%,
+		rgba(3, 4, 18, 0.5) 30%,
+		rgba(3, 4, 18, 0) 100%
+	);
+	right: 0;
+}
+
+.marquee-left-gradient{
+	background: linear-gradient(
+		to right,
+		#030412 0%,
+		rgba(3, 4, 18, 0.5) 30%,
+		rgba(3, 4, 18, 0) 100%
+	);
+	left: 0;
+}

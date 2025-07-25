@@ -1,0 +1,60 @@
+@use '../../mixin.scss' as *;
+// AnimatedHeader
+.animated-header_container{
+
+	width: 100%;
+
+	background: linear-gradient(
+		to top,
+		#030412 0%,
+		rgba(3, 4, 18, 0.8) 40%,
+		rgba(3, 4, 18, 0) 100%
+	);
+
+	margin-bottom: 2rem;
+}
+
+.animated-header_subtitle{
+	margin-bottom: -15px;
+}
+
+.animated-header_title_wrapper{
+	box-sizing: border-box;
+	overflow: hidden;
+}
+
+.animated-header_title{
+
+	font-size: calc(1.7 * var(--h1-font-size));
+	margin: 0;
+	text-transform: uppercase;
+
+	&_br{
+		position: absolute;
+		width: 100%;
+		height: 2px;
+		background-color: #FFF;
+		left: 0;
+		top: 0;
+	}
+
+	@include respond(sm){
+		font-size: calc(1.3 * var(--h1-font-size));
+		margin: 1rem 0;
+	}
+
+}
+
+.animated-header_container-bottom{
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: flex-end;
+}
+
+.animated-header_description-item{
+	display: inline-block;
+	margin: 0.5rem 0;
+	
+}

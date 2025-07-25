@@ -1,0 +1,29 @@
+#project-selection_section{
+  margin-top: 120vh;
+  height: auto;
+}
+
+.project-selection_cards-list{ 
+  
+  .project-card_container{
+    width: 100%;
+    height: 20vh;
+    display: flex;
+    margin: 0.5rem 0;
+
+    .project-card_image-wrapper{
+      height: 100%;
+      flex: 1;
+    }
+
+    .project-card_content{
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+  }
+}
+
+

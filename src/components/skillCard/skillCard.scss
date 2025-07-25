@@ -1,0 +1,11 @@
+
+.card{
+	padding: 1rem;
+	border-radius: 15px;
+	border: 1px solid color-mix(in oklab, var(--color-indigo) 10%, transparent);
+	background-image: linear-gradient(
+    to bottom, 
+    var(--color-storm), 
+    var(--color-indigo)
+  );
+}
