@@ -1,5 +1,6 @@
 import React from 'react'
 import {TimeLine} from '../../components/timeLine/TimeLine'
+import TimeLine2 from '../../components/timeline2/TimeLine2'
 import { experiences } from '../../constants'
 import './experience.scss'
 
@@ -7,7 +8,8 @@ const Projects = () => {
   return (
     <section className='experience-section'>
       <div className="container projects-container">
-        <TimeLine data={experiences} />
+        {/* <TimeLine data={experiences} /> */}
+        <TimeLine2 />
       </div>
       
     </section>

@@ -4,7 +4,7 @@ import createGlobe from "cobe";
 import { useEffect, useRef } from "react";
 import { twMerge } from "tailwind-merge";
 
-const GLOBE_CONFIG = { 
+const GLOBE_CONFIG = {
   width: 400,
   height: 400,
   onRender: () => {},
