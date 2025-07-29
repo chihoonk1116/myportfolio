@@ -23,6 +23,10 @@
 
     h3{
       white-space: nowrap;
+
+      @include respond(sm){
+        white-space:initial;
+      }
     }
 
     &-stacks{
@@ -32,13 +36,27 @@
       column-gap: 0.8rem;
 
       background-color: rgba($color: #000000, $alpha: 0.5);
-      padding: 0.5rem;
+      padding: 0.3rem;
       border-radius: var(--standard-border-radius);
 
       img{
         width: 30px;
         height: 30px;
+
+        @include respond(sm){
+          width: 15px;
+          height: 15px;
+        }
       }
+  
+    }
+
+    @include respond(sm){
+      width: 100%;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 0.5rem;
     }
 
   }
@@ -70,6 +88,9 @@
       }
     }
 
+    @include respond(sm){
+      text-align: center;
+    }
  
 
   }

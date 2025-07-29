@@ -13,7 +13,7 @@ const GLOBE_CONFIG = {
   theta: 0.3,
   dark: 1,
   diffuse: 0.4,
-  mapSamples: 5000,
+  mapSamples: 6000,
   mapBrightness: 1.2,
   baseColor: [1, 1, 1],
   markerColor: [1, 1, 1],
@@ -55,7 +55,7 @@ export function Globe({ className, config = GLOBE_CONFIG }) {
       height: width,
       onRender: (state) => {
         const now = Date.now();
-        if (now - lastTime > 66) {
+        if (now - lastTime > 33) {
           phi += 0.0025;
           lastTime = now;
         }

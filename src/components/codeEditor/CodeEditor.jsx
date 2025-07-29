@@ -145,7 +145,7 @@ const CodeEditorArea = () => {
           customStyle={{       
             backgroundColor: 'transparent', 
             margin: 0,
-            overflow: 'auto', // 내용이 길면 스크롤바 표시
+            overflow: 'auto',
             fontSize: '0.9em',
             fontFamily: 'SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace', // macOS 코드 폰트 스택
           }}
@@ -159,7 +159,7 @@ const CodeEditorArea = () => {
         </SyntaxHighlighter>
       </div>
       <div className="code-window_footer">
-        <span>Thank you for your visiting</span>
+        
       </div>
     </div>
   )

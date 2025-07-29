@@ -2,6 +2,10 @@
 
 #project-selection_section{
   height: auto;
+
+  .animated-header_title{
+    margin: 0;
+  }
 }
 
 .project-selection_cards-list{ 
@@ -14,9 +18,14 @@
 
   .project-selection_cards_card-wrapper{
     width: 100%;
-    border-radius: var(--standard-border-radius);
+    border-radius: 10px;
     overflow: hidden;
     background-color: var(--color-midnight);
+    cursor: pointer;
+  }
+
+  @include respond(sm){
+    row-gap: 1rem;
   }
 
   

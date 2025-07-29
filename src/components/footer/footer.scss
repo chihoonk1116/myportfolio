@@ -1,5 +1,7 @@
+@use '../../mixin.scss' as *;
+
 .footer-container{
-  padding: 0.8rem 0;
+  padding: 0.8rem 1rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -19,6 +21,16 @@
 .social-links,
 .copyright{
   flex: 1;
+  @include respond(sm){
+    font-size: 0.7rem;
+  }
+}
+
+.footer-title{
+  
+  @include respond(sm){
+    font-size: 0.7rem;
+  }
 }
 
 .social-links{
@@ -34,6 +46,11 @@
     height: 1.2rem;
     transition: transform 0.2s ease-in-out;
     cursor: pointer;
+
+    @include respond(sm){
+      width: 0.9rem;
+      height: 0.9rem;
+    }
   }
 
   svg:hover{

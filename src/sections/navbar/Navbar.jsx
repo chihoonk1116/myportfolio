@@ -54,7 +54,7 @@ const Navbar = () => {
       <div className="nav-container">
         <div className="nav-wrapper">
           <div className="nav-title-wrapper">
-            <p className="nav-title" href="">CH_K</p>
+            <p className="nav-title">CH_K</p>
           </div>
           <div
             onClick={() => setIsOpen(!isOpen)}
