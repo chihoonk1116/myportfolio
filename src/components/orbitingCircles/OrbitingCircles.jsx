@@ -1,11 +1,9 @@
 import React from 'react'
 
 import './orbitingCircles.scss'
-import { icons } from '../../constants'
 
 
-
-const OrbitingCircles = ({radius}) => {
+const OrbitingCircles = ({radius, icons}) => {
 
   const numIcons = icons.length
   const baseAngleStep = 360 / numIcons
@@ -17,7 +15,7 @@ const OrbitingCircles = ({radius}) => {
       style={{'width' : radius * 2, 'height' : radius * 2}}
     >
       <div className="orbit-circle">
-        {icons.map((icon, index) => {
+        {icons.map(({id, Component}, index) => {
           const currentAngle = index * baseAngleStep
           return (
             <div  
@@ -27,10 +25,9 @@ const OrbitingCircles = ({radius}) => {
                 '--angle': currentAngle,
                 '--radius' : radius,
               }} >
-                <img
-                  className='orbit-circle_icon' 
-                  src={icon} alt={`icon ${index+1}`} 
-                />
+                <div className="orbit-circle_icon">
+                  <Component key={id}/>
+                </div>
             </div>
           )
 

@@ -35,18 +35,21 @@
       align-items: center;
       column-gap: 0.8rem;
 
-      background-color: rgba($color: #000000, $alpha: 0.5);
-      padding: 0.3rem;
+      padding: 0.3rem 1rem;
       border-radius: var(--standard-border-radius);
+      background-color: rgba($color: #FFF, $alpha: 0.7);
 
-      img{
+      svg{
+
         width: 30px;
         height: 30px;
 
         @include respond(sm){
-          width: 15px;
-          height: 15px;
+          width: 20px;
+          height: 20px;
         }
+
+        
       }
   
     }
@@ -56,6 +59,8 @@
       flex-direction: column;
       justify-content: center;
       align-items: center;
+      column-gap: 0;
+      row-gap: 0.2rem;
       margin-bottom: 0.5rem;
     }
 

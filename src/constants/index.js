@@ -1,12 +1,38 @@
+
+import AwsIcon from "../components/icons/awsIcon";
+import CssIcon from "../components/icons/CssIcon";
+import DockerIcon from "../components/icons/DockerIcon";
+import GithubIcon from "../components/icons/GithubIcon";
+import HtmlIcon from "../components/icons/HtmlIcon";
+import JavaScriptIcon from "../components/icons/JavaScriptIcon";
+import LambdaIcon from "../components/icons/LambdaIcon";
+import MongoDB from "../components/icons/MongoDB";
+import MySqlIcon from "../components/icons/MySqlIcon";
+import NodejsIcon from "../components/icons/NodejsIcon";
+import PHPIcon from "../components/icons/PHPIcon";
+import ReactIcon from "../components/icons/ReactIcon";
+import ScssIcon from "../components/icons/ScssIcon";
+import TailwindcssIcon from "../components/icons/TailwindcssIcon";
+import ViteIcon from "../components/icons/ViteIcon";
+import WordpressIcon from "../components/icons/WordpressIcon";
+
 export const icons = [
-  "/myportfolio/assets/icons/aws.png",
-  "/myportfolio/assets/icons/css.png",
-  "/myportfolio/assets/icons/html5.png",
-  "/myportfolio/assets/icons/js.png",
-  "/myportfolio/assets/icons/github.png",
-  "/myportfolio/assets/icons/java.png",
-  "/myportfolio/assets/icons/mongodb.png",
-  "/myportfolio/assets/icons/nodejs.png",
+  {id: 'aws', Component: AwsIcon},
+  {id: 'css', Component: CssIcon},
+  {id: 'docker', Component: DockerIcon},
+  {id: 'github', Component: GithubIcon},
+  {id: 'html', Component: HtmlIcon},
+  {id: 'js', Component: JavaScriptIcon},
+  {id: 'lambda', Component: LambdaIcon},
+  {id: 'mongoDB', Component: MongoDB},
+  {id: 'mySql', Component: MySqlIcon},
+  {id: 'nodejs', Component: NodejsIcon},
+  {id: 'php', Component: PHPIcon},
+  {id: 'react', Component: ReactIcon},
+  {id: 'scss', Component: ScssIcon},
+  {id: 'tailwindcss', Component: TailwindcssIcon},
+  {id: 'vite', Component: ViteIcon},
+  {id: 'wordpress', Component: WordpressIcon},
 ]
 
 export const experiences = [

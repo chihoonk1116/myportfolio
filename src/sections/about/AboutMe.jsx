@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import AnimatedHeader from '../../components/animatedHeader/AnimatedHeader'
 import { Marquee } from '../../components/marquee/Marquee'
 import codingImage from '/assets/coding-pov.png'
+import { icons } from '../../constants'
 import OrbitingCircles from '../../components/orbitingCircles/OrbitingCircles'
 
 import './about.scss'
@@ -76,8 +77,8 @@ const AboutMe = () => {
               </p>
             </div>
             <div className="grid-c_stack-circle">
-              <OrbitingCircles radius={radius}></OrbitingCircles>
-              <OrbitingCircles radius={radius * 2}></OrbitingCircles>
+              <OrbitingCircles radius={radius} icons={icons.slice(0, Math.ceil(icons.length / 2))}></OrbitingCircles>
+              <OrbitingCircles radius={radius * 2} icons={icons.slice(Math.ceil(icons.length / 2), icons.length)}></OrbitingCircles>
             </div>
           </div>
         </div>

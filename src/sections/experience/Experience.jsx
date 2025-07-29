@@ -6,7 +6,7 @@ import './experience.scss'
 const Projects = () => {
   return (
     <section className='experience-section'>
-      <div className="container projects-container">
+      <div className="container projects-container relative">
         <TimeLine data={experiences} />
         {/* <TimeLine2 /> */}
       </div>

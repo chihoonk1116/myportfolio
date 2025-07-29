@@ -55,8 +55,10 @@ const ProjectCard = ({source, projectName, description, skillSets}) => {
         <div className="project-card_top-title">
           <h3>{projectName}</h3>
           <div className="project-card_top-title-stacks">
-            {skillSets.map((skill, i) => (
-              <img key={i} src={skill} alt="" />
+            {skillSets.map(({id, Component}) => (
+              <div className="svg-wrapper">
+                <Component key={id}/>
+              </div>
             ))}
           </div>
         </div>

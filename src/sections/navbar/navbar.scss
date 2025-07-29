@@ -4,10 +4,11 @@
 
 	&-section{
 		width: 100%;
-		background-color: var(--color-midnight);
 		position: fixed;
 		z-index: 100;
 		transition: all 0.3s ease-in-out;
+		background-color: var(--color-midnight);
+
 	}
 
 	&-container{
@@ -20,6 +21,8 @@
 		justify-content: space-between;
 		align-items: center;
 		max-width: var(--standard-max-width);
+		background-color: var(--color-midnight);
+
 
 		margin: 0 auto;
 		padding: 0 1rem;
@@ -130,8 +133,34 @@
 
 	display: none;
 
+	.nav-ul{
+
+		@include respond(sm){
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			row-gap: 1rem;
+		}
+		
+	}
+
+	.nav-li{
+
+		@include respond(lg){
+			width: 100%;	
+			text-align: center;
+
+		}
+		
+	}
+	
+
 	@include respond(lg){
 		display: block;
+		// flex-direction: column;
+		// justify-content: center;
+		// align-items: center;
 	}
 }
 

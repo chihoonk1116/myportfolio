@@ -36,6 +36,11 @@
   object-fit: contain;
   display: block;
   animation: spin 30s linear infinite;
+  background-color: #FFF;
+  padding: 0.3rem;
+  overflow: hidden;
+  box-sizing: content-box;
+  border-radius: 50%;
 }
 
 

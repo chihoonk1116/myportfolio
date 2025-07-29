@@ -7,18 +7,24 @@ import aws from '/assets/icons/aws.png'
 import js from '/assets/icons/js.png'
 import html5 from '/assets/icons/html5.png'
 
+import { icons } from '../../constants'
+
 import './projectSelection.scss'
 
 
 const ProjectSelection = () => {
 
-   const description = [
-      'Lorem ipsum dolor sit amet.',
-      'Lorem ipsum dolor sit amet.',
-      'Lorem ipsum dolor sit amet.',
-    ]
+  function getSkillSets(keys){
+    return icons.filter(icon => keys.includes(icon.id))
+  }
+
+  const description = [
+    'Lorem ipsum dolor sit amet.',
+    'Lorem ipsum dolor sit amet.',
+    'Lorem ipsum dolor sit amet.',
+  ]
   
-    const skillSets = [aws, js, html5]
+  const skillSets = [aws, js, html5]
 
   return (
     <section id='project-selection_section'>
@@ -30,41 +36,10 @@ const ProjectSelection = () => {
               source={imageSrc} 
               projectName={"Exam Simulator"}  
               description={description}
-              skillSets={skillSets}
+              skillSets={getSkillSets(['aws', 'js', 'html'])}
             />
           </div>
-          <div className="project-selection_cards_card-wrapper">
-            <ProjectCard 
-              source={imageSrc} 
-              projectName={"PDF Converter"}  
-              description={description}
-              skillSets={skillSets}
-            />
-          </div>
-          <div className="project-selection_cards_card-wrapper">
-            <ProjectCard 
-              source={imageSrc} 
-              projectName={"Church Web Application"}  
-              description={description}
-              skillSets={skillSets}
-            />
-          </div>
-          <div className="project-selection_cards_card-wrapper">
-            <ProjectCard 
-              source={imageSrc} 
-              projectName={"project one"}  
-              description={description}
-              skillSets={skillSets}
-            />
-          </div>
-          <div className="project-selection_cards_card-wrapper">
-            <ProjectCard 
-              source={imageSrc} 
-              projectName={"project one"}  
-              description={description}
-              skillSets={skillSets}
-            />
-          </div>
+          
   
         </div>
       </div>

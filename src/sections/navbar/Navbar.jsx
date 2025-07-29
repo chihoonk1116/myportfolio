@@ -41,7 +41,7 @@ const Navbar = () => {
       y: -20,
       transition: {
         opacity: { duration: 0.1 },
-        height: { duration: 0.2, delay: delayValue }
+        height: { duration: 0.1, delay: delayValue }
       }
     })
 };
