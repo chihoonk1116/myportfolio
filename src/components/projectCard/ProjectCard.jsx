@@ -89,11 +89,11 @@ const ProjectCard = ({source, projectName, description, skillSets}) => {
               )}
             </div>
             <div className="project-card_content">
-              <div className="project-card_content-description">
+              <ul className="project-card_content-description">
                 {description.map((desc, i) => (
-                  <p key={i}>{desc}</p>
+                  <li key={i}>{desc}</li>
                 ))}
-              </div>
+              </ul>
             </div>
           </motion.div>  
         )}

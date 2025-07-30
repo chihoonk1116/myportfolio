@@ -1,3 +1,4 @@
+import exampleImg from '/assets/coding-pov.png'
 
 import AwsIcon from "../components/icons/awsIcon";
 import CssIcon from "../components/icons/CssIcon";
@@ -15,6 +16,21 @@ import ScssIcon from "../components/icons/ScssIcon";
 import TailwindcssIcon from "../components/icons/TailwindcssIcon";
 import ViteIcon from "../components/icons/ViteIcon";
 import WordpressIcon from "../components/icons/WordpressIcon";
+
+export const skills = [
+  { name: 'Eager to Learn', desc: 'Continuously seeks new knowledge and stays up-to-date with the latest technologies.' },
+  { name: 'Problem Solver', desc: 'Approaches complex challenges methodically and finds efficient solutions.' },
+  { name: 'Attention to Detail', desc: 'Catches subtle bugs and ensures code quality through precision and care.' },
+  { name: 'Effective Communicator', desc: 'Able to explain technical concepts clearly to both technical and non-technical audiences.' },
+  { name: 'Team Player', desc: 'Collaborates well with others and contributes to a supportive and productive work environment.' },
+  { name: 'Self-Motivated', desc: 'Takes initiative and delivers results without needing constant supervision.' },
+  { name: 'Adaptable', desc: 'Quickly adjusts to new tools, frameworks, and project requirements.' },
+  { name: 'Critical Thinker', desc: 'Analyzes issues logically and makes informed decisions under pressure.' },
+  { name: 'Time Management', desc: 'Prioritizes tasks effectively to meet deadlines and maintain productivity.' },
+  { name: 'Curious', desc: 'Explores new ideas, tools, and approaches out of genuine interest.' },
+  { name: 'Open to Feedback', desc: 'Values constructive criticism and uses it to grow and improve.' },
+  { name: 'Empathetic Developer', desc: 'Builds user-centered applications by understanding real user needs and experiences.' }
+]
 
 export const icons = [
   {id: 'aws', Component: AwsIcon},
@@ -73,3 +89,43 @@ export const experiences = [
     ],
   },
 ];
+
+
+export const projects = [
+  {
+    imageSrc: exampleImg,
+    title: "Exam Simulator",
+    skillSets: ["html", "css", "js", "php", "wordpress"],
+    description: [
+      "Developed a custom WordPress exam simulator using PHP, HTML/CSS/JS with fully tailored themes and post types.",
+      "Created exam, question, and assigned_exam custom post types, using custom fields to define relationships between exams, questions, and students.",
+      "Built a dynamic exam assignment system where instructors could assign exams to specific students with due dates and track individual results.",
+      "Implemented real-time exam timer and auto-submission functionality with JavaScript, and stored performance data via custom REST APIs.",
+      "Used WP_Query and WordPress core functions for full CRUD operations, and built custom APIs to manage content without relying on the admin dashboard."
+    ]
+  },
+  {
+    imageSrc: exampleImg,
+    title: "Exam Simulator",
+    skillSets: ["html", "css", "js", "php", "wordpress"],
+    description: [
+      "Developed a custom WordPress exam simulator using PHP, HTML/CSS/JS with fully tailored themes and post types.",
+      "Created exam, question, and assigned_exam custom post types, using custom fields to define relationships between exams, questions, and students.",
+      "Built a dynamic exam assignment system where instructors could assign exams to specific students with due dates and track individual results.",
+      "Implemented real-time exam timer and auto-submission functionality with JavaScript, and stored performance data via custom REST APIs.",
+      "Used WP_Query and WordPress core functions for full CRUD operations, and built custom APIs to manage content without relying on the admin dashboard."
+    ]
+  },
+  {
+    imageSrc: exampleImg,
+    title: "Exam Simulator",
+    skillSets: ["html", "css", "js", "php", "wordpress"],
+    description: [
+      "Developed a custom WordPress exam simulator using PHP, HTML/CSS/JS with fully tailored themes and post types.",
+      "Created exam, question, and assigned_exam custom post types, using custom fields to define relationships between exams, questions, and students.",
+      "Built a dynamic exam assignment system where instructors could assign exams to specific students with due dates and track individual results.",
+      "Implemented real-time exam timer and auto-submission functionality with JavaScript, and stored performance data via custom REST APIs.",
+      "Used WP_Query and WordPress core functions for full CRUD operations, and built custom APIs to manage content without relying on the admin dashboard."
+    ]
+  },
+]

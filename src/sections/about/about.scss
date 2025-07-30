@@ -18,7 +18,7 @@
   "a b"
   "c c";
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 520px 300px;
+  grid-template-rows: 520px 320px;
   row-gap: 2rem;
 
   p{
@@ -36,8 +36,10 @@
       "c c";
   }
 
+
+
   @include respond(sm){
-    grid-template-rows: 70vh 340px;
+    grid-template-rows: 70vh 420px;
   }
 }
 
@@ -102,7 +104,8 @@
   grid-area: b;
   position: relative;
   border-radius: var(--standard-border-radius);
-  transform: translateX(100px);
+  transform: translateX(50px);
+  z-index: -1;
 
   .marquee-list_wrapper{
     width: 100%;
@@ -185,6 +188,14 @@
     }
   }
 
+  .stacks-list{
+    margin: 1rem 0 0 1rem;
+  }
+
+  .stacks-list li{
+    list-style: circle;
+  }
+
   @include respond(lg){
     justify-content: center
   }
@@ -203,7 +214,7 @@
   transform: translateY(-272.5px);
 
   @include respond(sm){
-    transform: translateY(-520px);
+    transform: translateY(-627px);
     right: 50%;
     bottom: -25%;
   }

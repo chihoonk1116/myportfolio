@@ -1,16 +1,16 @@
 import React from 'react'
 import './skillCard.scss'
+import {}  from '../../constants'
 
-const SkillCard = () => {
+const SkillCard = ({skillName, desc}) => {
   return (
     <div className='card skillcard'>
       <div className="card-top">
-        <h3>Skill Logo</h3>
-        <p>Skill name</p>
+        <h5>{skillName}</h5>
       </div>
       <div className="card-bottom">
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis, rerum.
+          {desc}
         </p>
       </div>
     </div>

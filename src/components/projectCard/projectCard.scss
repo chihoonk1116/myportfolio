@@ -48,10 +48,7 @@
           width: 20px;
           height: 20px;
         }
-
-        
       }
-  
     }
 
     @include respond(sm){
@@ -63,7 +60,6 @@
       row-gap: 0.2rem;
       margin-bottom: 0.5rem;
     }
-
   }
 
   &-summary{
@@ -127,6 +123,21 @@
       flex-direction: column;
       justify-content: space-between;
       align-items: flex-start;
+      padding-left: 1rem;
+      margin-left: 0.5rem;
+
+      &-description{
+        display: flex;
+        height: 100%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        row-gap: 0.5rem;
+
+        li{
+          list-style-type: disc;
+        }
+      }
     }
 
   .project-card_content-stacks{
