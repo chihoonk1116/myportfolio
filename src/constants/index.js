@@ -32,6 +32,18 @@ export const skills = [
   { name: 'Empathetic Developer', desc: 'Builds user-centered applications by understanding real user needs and experiences.' }
 ]
 
+export const techSkills = [
+  { name: 'Data Structure', desc: 'Organizes and manages data efficiently using arrays, linked lists, trees, and graphs.' },
+  { name: 'Algorithm', desc: 'Solves problems with optimized logic and efficient use of time and space.' },
+  { name: 'Object-Oriented Programming', desc: 'Structures software using principles like encapsulation, inheritance, and polymorphism.' },
+  { name: 'Database Systems', desc: 'Designs and queries relational and non-relational databases for structured data management.' },
+  { name: 'Operating Systems', desc: 'Understands process management, memory allocation, and file systems.' },
+  { name: 'Computer Networks', desc: 'Explores communication protocols, IP addressing, and client-server architectures.' },
+  { name: 'Software Engineering', desc: 'Applies development methodologies to plan, design, test, and maintain software systems.' },
+  { name: 'Web Technologies', desc: 'Builds interactive front-end and back-end systems using HTML, CSS, JavaScript, and server-side languages.' },
+  { name: 'Software Architecture', desc: 'Defines high-level structure of software systems to ensure scalability, maintainability, and performance.' },
+]
+
 export const icons = [
   {id: 'aws', Component: AwsIcon},
   {id: 'css', Component: CssIcon},
@@ -97,11 +109,11 @@ export const projects = [
     title: "Exam Simulator",
     skillSets: ["html", "css", "js", "php", "wordpress"],
     description: [
-      "Developed a custom WordPress exam simulator using PHP, HTML/CSS/JS with fully tailored themes and post types.",
-      "Created exam, question, and assigned_exam custom post types, using custom fields to define relationships between exams, questions, and students.",
-      "Built a dynamic exam assignment system where instructors could assign exams to specific students with due dates and track individual results.",
-      "Implemented real-time exam timer and auto-submission functionality with JavaScript, and stored performance data via custom REST APIs.",
-      "Used WP_Query and WordPress core functions for full CRUD operations, and built custom APIs to manage content without relying on the admin dashboard."
+      "Developed a custom WordPress exam simulator using PHP and tailored post types and themes.",
+      "Created custom post types (exam, question, assigned_exam) with custom fields to link students and exams.",
+      "Built a system for instructors to assign timed exams to specific students and track results.",
+      "Used WP_Query and WordPress core functions to perform full CRUD operations.",
+      "Built custom APIs to manage content without relying on the WordPress admin dashboard using AJAX."
     ]
   },
   {

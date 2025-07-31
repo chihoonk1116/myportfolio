@@ -39,7 +39,7 @@
 
 
   @include respond(sm){
-    grid-template-rows: 70vh 420px;
+    grid-template-rows: 70vh 460px;
   }
 }
 
@@ -214,7 +214,7 @@
   transform: translateY(-272.5px);
 
   @include respond(sm){
-    transform: translateY(-627px);
+    transform: translateY(-665px);
     right: 50%;
     bottom: -25%;
   }

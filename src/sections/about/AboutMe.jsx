@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import AnimatedHeader from '../../components/animatedHeader/AnimatedHeader'
 import { Marquee } from '../../components/marquee/Marquee'
 import codingImage from '/assets/coding-pov.png'
-import { icons } from '../../constants'
+import { icons, skills, techSkills } from '../../constants'
 import OrbitingCircles from '../../components/orbitingCircles/OrbitingCircles'
 
 import './about.scss'
@@ -50,9 +50,9 @@ const AboutMe = () => {
           </div>
           <div className="grid-b">
             <div className="marquee-list_wrapper">
-              <Marquee animation='marquee 45s linear infinite'></Marquee>
-              <Marquee animation='marquee 135s linear infinite'></Marquee>
-              <Marquee animation='marquee 90s linear infinite'></Marquee>
+              <Marquee animation='marquee 40s linear infinite' skills={skills}></Marquee>
+              <Marquee animation='marquee 180s linear infinite' skills={skills}></Marquee>
+              <Marquee animation='marquee 90s linear infinite'skills={techSkills} ></Marquee>
               <div className="marquee-top-gradient" />
               <div className="marquee-right-gradient" />
               <div className="marquee-left-gradient" />
@@ -78,7 +78,7 @@ const AboutMe = () => {
                 <li>Node.js, Express, PHP, MongoDB, MySQL</li>
                 <li>Docker, Cloud(GCP, AWS)</li>
                 <li>WordPress & REST API, Git, Composer</li>
-                <li>Structured metadata, keyword optimization</li>
+                <li>SEO: Structured metadata, keyword optimization</li>
             </ul>
             <div className="grid-c_stack-circle">
               <OrbitingCircles radius={radius} icons={icons.slice(0, Math.ceil(icons.length / 2))}></OrbitingCircles>

@@ -28,7 +28,7 @@ const Hero = () => {
     
       <Particles
         className="particles-container"
-        quantity={500}
+        quantity={800}
         ease={80}
         color={"#ffffff"}
         refresh

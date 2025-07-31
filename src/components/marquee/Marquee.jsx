@@ -1,11 +1,10 @@
 import React from "react";
 import { motion } from "motion/react";
 import SkillCard from "../skillCard/SkillCard";
-import { skills } from "../../constants";
 
 import './marquee.scss'
 
-export const Marquee = ({animation = "marquee 30s linear infinite"}) =>{
+export const Marquee = ({animation = "marquee 30s linear infinite", skills}) =>{
 
 
   return(
