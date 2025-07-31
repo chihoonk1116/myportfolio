@@ -48,7 +48,7 @@ const Navbar = () => {
 
   return( 
     <div 
-      className="nav-section" 
+      className="nav-section backdrop-blur-lg" 
       ref={navRef}
     >
       <div className="nav-container">
