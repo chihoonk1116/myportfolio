@@ -134,6 +134,31 @@
         }
       }
 
+      &-links{
+        width: 100%;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        column-gap: 0.5rem;
+        
+
+        a{
+          padding: 0.2rem 0.4rem;
+          font-size: 0.8rem;
+          border-radius: 10px;
+          background-color: var(--color-royal);
+          transition: all 0.2s ease;
+        }
+
+        a:hover{
+          background-color: var(--color-primary);
+        }
+
+        @include respond(lg){
+          margin-top: 1rem;
+        }
+      }
+
       @include respond(lg){
         margin-top: 1rem;
       }

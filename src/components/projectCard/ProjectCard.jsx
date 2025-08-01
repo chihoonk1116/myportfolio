@@ -3,7 +3,7 @@ import './projectCard.scss'
 import { AnimatePresence, motion } from 'motion/react'
 
 
-const ProjectCard = ({source, projectName, description, skillSets}) => {
+const ProjectCard = ({source, projectName, description, skillSets, summary, links}) => {
 
   const [isOpen, setIsOpen] = useState(false)
   const containerRef = useRef()
@@ -75,7 +75,7 @@ const ProjectCard = ({source, projectName, description, skillSets}) => {
         </div>
         <div className="project-card_top-summary">
           <p>
-            Wordpress Custom Theme Developement REST API, WP Query, FrontEnd Developement
+            {summary}
           </p>
         </div>
       </div>
@@ -109,6 +109,11 @@ const ProjectCard = ({source, projectName, description, skillSets}) => {
                   <li key={i}>{desc}</li>
                 ))}
               </ul>
+              <div className="project-card_content-links">
+                {links.map((link, i) => (
+                  <a target='_blank' href={link.address}>{link.title}</a>
+                ))}
+              </div>
             </div>
           </motion.div>  
         )}
