@@ -1,4 +1,10 @@
-import exampleImg from '/assets/coding-pov.png'
+
+import examSimulatorVid from '/assets/video/Exam_Simulator.mp4'
+import churchAppVid from '/assets/video/churchapp.mp4'
+import iaestheticVid from '/assets/video/iaesthetic.mp4'
+import kmunchiesVid from '/assets/video/kmunchies.mp4'
+import landingpagesVid from '/assets/video/landingpages.mp4'
+import portfolio2Vid from '/assets/video/portfolio2.mp4'
 
 import AwsIcon from "../components/icons/awsIcon";
 import CssIcon from "../components/icons/CssIcon";
@@ -16,6 +22,8 @@ import ScssIcon from "../components/icons/ScssIcon";
 import TailwindcssIcon from "../components/icons/TailwindcssIcon";
 import ViteIcon from "../components/icons/ViteIcon";
 import WordpressIcon from "../components/icons/WordpressIcon";
+
+
 
 export const skills = [
   { name: 'Eager to Learn', desc: 'Continuously seeks new knowledge and stays up-to-date with the latest technologies.' },
@@ -81,7 +89,7 @@ export const experiences = [
     job: "Family Business Manager",
     date: "2023 - 2024",
     contents: [
-      "Led digital transformation of a family business by building and deploying a web app using React, Node.js, and Express on AWS EC2.",
+      "Designed and developed a custom website for a family business using HTML, CSS, JavaScript, and PHP, tailored to the business's branding and needs.",
       "Aligned technical solutions with business goals to boost operational efficiency and digital presence.",
       "Registered and configured a custom domain with DNS management, and set up Google Search Console for indexing, enhancing discoverability on search engines.",
       "Managed Google Business Profile to maintain accurate, engaging local presence.",
@@ -105,9 +113,9 @@ export const experiences = [
 
 export const projects = [
   {
-    imageSrc: exampleImg,
+    imageSrc: examSimulatorVid,
     title: "Exam Simulator",
-    skillSets: ["html", "css", "js", "php", "wordpress"],
+    skillSets: ["html", "css", "js", "php", "wordpress", "mySql"],
     description: [
       "Developed a custom WordPress exam simulator using PHP and tailored post types and themes.",
       "Created custom post types (exam, question, assigned_exam) with custom fields to link students and exams.",
@@ -117,9 +125,9 @@ export const projects = [
     ]
   },
   {
-    imageSrc: exampleImg,
-    title: "Exam Simulator",
-    skillSets: ["html", "css", "js", "php", "wordpress"],
+    imageSrc: churchAppVid,
+    title: "Chuch Web Application",
+    skillSets: ["react","nodejs", "mongoDB", "html", "css" ],
     description: [
       "Developed a custom WordPress exam simulator using PHP, HTML/CSS/JS with fully tailored themes and post types.",
       "Created exam, question, and assigned_exam custom post types, using custom fields to define relationships between exams, questions, and students.",
@@ -129,9 +137,45 @@ export const projects = [
     ]
   },
   {
-    imageSrc: exampleImg,
-    title: "Exam Simulator",
-    skillSets: ["html", "css", "js", "php", "wordpress"],
+    imageSrc: kmunchiesVid,
+    title: "K-munchies Website",
+    skillSets: ["html", "css", "js", "php"],
+    description: [
+      "Developed a custom WordPress exam simulator using PHP, HTML/CSS/JS with fully tailored themes and post types.",
+      "Created exam, question, and assigned_exam custom post types, using custom fields to define relationships between exams, questions, and students.",
+      "Built a dynamic exam assignment system where instructors could assign exams to specific students with due dates and track individual results.",
+      "Implemented real-time exam timer and auto-submission functionality with JavaScript, and stored performance data via custom REST APIs.",
+      "Used WP_Query and WordPress core functions for full CRUD operations, and built custom APIs to manage content without relying on the admin dashboard."
+    ]
+  },
+  {
+    imageSrc: iaestheticVid,
+    title: "I-aesthetic Website",
+    skillSets: ["html", "css", "js", "php"],
+    description: [
+      "Developed a custom WordPress exam simulator using PHP, HTML/CSS/JS with fully tailored themes and post types.",
+      "Created exam, question, and assigned_exam custom post types, using custom fields to define relationships between exams, questions, and students.",
+      "Built a dynamic exam assignment system where instructors could assign exams to specific students with due dates and track individual results.",
+      "Implemented real-time exam timer and auto-submission functionality with JavaScript, and stored performance data via custom REST APIs.",
+      "Used WP_Query and WordPress core functions for full CRUD operations, and built custom APIs to manage content without relying on the admin dashboard."
+    ]
+  },
+  {
+    imageSrc: portfolio2Vid,
+    title: "Portfolio with 3D modeling - clone",
+    skillSets: ["react", "css", "html"],
+    description: [
+      "Developed a custom WordPress exam simulator using PHP, HTML/CSS/JS with fully tailored themes and post types.",
+      "Created exam, question, and assigned_exam custom post types, using custom fields to define relationships between exams, questions, and students.",
+      "Built a dynamic exam assignment system where instructors could assign exams to specific students with due dates and track individual results.",
+      "Implemented real-time exam timer and auto-submission functionality with JavaScript, and stored performance data via custom REST APIs.",
+      "Used WP_Query and WordPress core functions for full CRUD operations, and built custom APIs to manage content without relying on the admin dashboard."
+    ]
+  },
+  {
+    imageSrc: landingpagesVid,
+    title: "Landing page clones",
+    skillSets: ["html", "scss", "react"],
     description: [
       "Developed a custom WordPress exam simulator using PHP, HTML/CSS/JS with fully tailored themes and post types.",
       "Created exam, question, and assigned_exam custom post types, using custom fields to define relationships between exams, questions, and students.",

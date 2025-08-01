@@ -71,7 +71,6 @@
     align-items: flex-end;
 
     &_points{
-
       height: 100%;
 
       display: flex;
@@ -88,15 +87,10 @@
         column-gap: 1.5rem;
       }
     }
-
     @include respond(sm){
       text-align: center;
     }
- 
-
   }
-
-
 }
 
 .project-card_container{
@@ -104,13 +98,14 @@
   width: 100%;
   height: 20vh;
   display: flex;
-  margin: 0.5rem 0;
   padding-bottom: 0.8rem;
 
-  .project-card_image-wrapper{
+  .project-card_src-wrapper{
     height: 100%;
-    flex: 0.7;
-
+    flex: 1;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    overflow: hidden;
     img{
       width: 100%;
       height: 100%;
@@ -123,7 +118,7 @@
       flex-direction: column;
       justify-content: space-between;
       align-items: flex-start;
-      padding-left: 1rem;
+      padding: 0 1rem 0 2rem;
       margin-left: 0.5rem;
 
       &-description{
@@ -137,6 +132,10 @@
         li{
           list-style-type: disc;
         }
+      }
+
+      @include respond(lg){
+        margin-top: 1rem;
       }
     }
 
@@ -153,7 +152,7 @@
     }
   }
 
-  @include respond(md){
+  @include respond(lg){
     flex-direction: column;
   }
 }

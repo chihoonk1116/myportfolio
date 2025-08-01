@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import './projectCard.scss'
 import { AnimatePresence, motion } from 'motion/react'
 
@@ -7,6 +7,17 @@ const ProjectCard = ({source, projectName, description, skillSets}) => {
 
   const [isOpen, setIsOpen] = useState(false)
   const containerRef = useRef()
+  const videoRef = useRef(null)
+
+  useEffect(() => {
+    if(isOpen && videoRef.current){
+      videoRef.current.play()
+      videoRef.current.playbackRate = 2
+    }
+    else if(!isOpen && videoRef.current){
+      videoRef.current.pause()
+    }
+  },[isOpen])
 
   const variants = {
     open: () => ({
@@ -33,7 +44,7 @@ const ProjectCard = ({source, projectName, description, skillSets}) => {
 
   const isVideo = (source) => {
     if(typeof source !== "string") return false
-    const videoExt = ["mp4", "webm", "ogg"]
+    const videoExt = ["mp4", "webm", "ogg", "mkv"]
     const ext = source.split('.').pop().toLowerCase()
     return videoExt.includes(ext)
   }
@@ -53,7 +64,7 @@ const ProjectCard = ({source, projectName, description, skillSets}) => {
         onClick={() => setIsOpen(!isOpen)}
       >
         <div className="project-card_top-title">
-          <h3>{projectName}</h3>
+          <h4>{projectName}</h4>
           <div className="project-card_top-title-stacks">
             {skillSets.map(({id, Component}) => (
               <div className="svg-wrapper">
@@ -77,13 +88,17 @@ const ProjectCard = ({source, projectName, description, skillSets}) => {
             animate="open"
             exit="closed"
           >
-            <div className="project-card_image-wrapper">
+            <div className="project-card_src-wrapper">
               {isImage(source) && (
                 <img src={source} alt="project-image" />
               )}
 
               {isVideo(source) && (
-                <video className='pointer-events-none' loop autoPlay muted playsInline={true}>
+                <video 
+                  className='pointer-events-none' 
+                  loop muted playsInline={true}
+                  ref={videoRef}
+                >
                   <source src={source} type="video/mp4" />
                 </video>
               )}
